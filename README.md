@@ -10,6 +10,9 @@ As a progammer I wanted to search systematically and therefore some data scrapin
 This current implementation is just a real basic skeleton of my main idea.
 
 ## How it works
+
+The whole project consists of two parts - Grabber and Queue.
+
 ### Grabber
 Grabber part is responsible for grabbing data from various sources (car ads websites). 
 Only sauto.cz as data source is implemented, but by implementing **GrabberSourceInterface** there can be easily added more sources.
@@ -17,19 +20,19 @@ Only sauto.cz as data source is implemented, but by implementing **GrabberSource
 ### Queue
 This part is responsible for holding and processing grabbed data. 
 It is meant to be independent on time-consuming data grabbing in Grabber part.
-Items in queue can be easily stored in DB table for later processing.
+Items in queue can be easily stored in database table for later processing.
 
 Processing of items (**QueueProcessor**) could be later moved, but for now there is no reason to separate that further.
 
 ### Data analysis
-This part is not implemented at all, because for this I would have to implement some database handling.
+This part is not implemented at all, because for this I would have to incorporate database.
 However, it seems like reasonable next step for working with grabbed data.
 
 ## How to run it
 Now I am running it only by executing **index.php** file in console.
 Do not forget to run **composer install** to have all dependencies.
 
-## Ideas for future implementation
+## Ideas for future implementation and improvements
 - Implement configurable ads selection - enable entering model, price range, age etc. to get relevant data (use it for building target URL).
   However, it would need more abstraction to be universal and parameter conversion for different sources (sauto.cz has different manufacturer handling in URL than let's say tipcars.com, carvago.com, ...)
 - Implement looping through all available ads pages (now it grabs ads only from the first page).
