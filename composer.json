@@ -1,0 +1,24 @@
+{
+    "name": "ak/grabo",
+    "version": "1.0.0",
+    "description": "Simple data grabber, created for portfolio purposes.",
+    "authors": [
+        {
+            "name": "Ales Kopecky"
+        }
+    ],
+    "require": {
+        "grabo/grabber" : "1.0.0",
+        "grabo/queue": "1.0.0",
+        "symfony/panther": "^1.0"
+    },
+    "repositories": [
+        {
+            "type": "path",
+            "url": "libs/*"
+        }
+    ],
+    "require-dev": {
+        "dbrekelmans/bdi": "^0.3.0"
+    }
+}

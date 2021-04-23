@@ -1,0 +1,14 @@
+{
+    "name": "grabo/grabber",
+    "description": "Simple data grabber from different sources.",
+    "version": "1.0.0",
+    "require": {
+        "fabpot/goutte" : "4.0.1",
+        "grabo/queue": "1.0.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Grabo\\Grabber\\": "src/"
+        }
+    }
+}
